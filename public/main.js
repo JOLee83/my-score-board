@@ -23,13 +23,28 @@ const oneFromAway = () => {
   const teamAwayScore = document.querySelector(".awayteamscore");
   teamAwayScore.textContent = message;
 };
-// const homeChangeName = () => {
-//   var userInput = document.getElementById('#home').value;
-//   var newName = userInput;
+// let newName = document.getElementById('#home').value;
+const homeNameChange = () => {
+  console.log("new home name");
+  let updateHomeTeam = document.querySelector("#home");
+  let homeTeamName = document.querySelector(".hometeamname");
+  let message = `${updateHomeTeam.value}`;
+  homeTeamName.textContent = message;
+  // let message = `userInput`;
+  // const userInput = document.getElementById('#home').value;
+  // userInput.textContent = message;
+
+
 //   document.getElementsByClassName(".hometeamname").innerHTML = newName;
-// };
+};
+const awayNameChange = () => {
+  console.log("new away name");
+  let updateAwayTeam = document.querySelector("#away");
+  let awayTeamName = document.querySelector(".awayteamname");
+  let message = `${updateAwayTeam.value}`;
+  awayTeamName.textContent = message;
 
-
+};
 const main = () => {
   const addHomeOne = document.querySelector('.addhome');
   addHomeOne.addEventListener("click", oneToHome);
@@ -40,8 +55,11 @@ const main = () => {
   const SubAwayOne = document.querySelector('.subaway');
   SubAwayOne.addEventListener("click", oneFromAway);
 
-  // const newHomeName = document.getElementsByClassName('.namehome');
-  // newHomeName.addEventListener("click", homeNameChange);
+  const newHomeName = document.querySelector('.namehome');
+  newHomeName.addEventListener("click", homeNameChange);
+
+  const newAwayName = document.querySelector('.nameaway');
+  newAwayName.addEventListener("click", awayNameChange);
 
 };
 
