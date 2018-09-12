@@ -7,7 +7,53 @@
     <link rel="stylesheet" href="/screen.css">
   </head>
   <body>
-    <h1>Hello, World!</h1>
+    <header>
+      <h1>My Score Board</h1>
+    </header>
+    <section class="scores">
+      <aside class="home">
+        <h3 class="hometeamname">Home<h3>
+        <h2 class="hometeamscore">0<h2>
+      </aside>
+      <aside class="away">
+        <h3 class="awayteamname">Away<h3>
+        <h2 class="awayteamscore">0<h2>
+      </aside>
+    </section>
+    <section class="modifier">
+      <aside>
+        <div>
+          <h3>Update Home Team Name</h3>
+          <nav>
+            <input placeholder="New Home Name" id="home">
+            <button class="namehome">Update</button>
+          </nav>
+        </div>
+        <div class="changehomescore">
+          <h3>Update Home Score</h3>
+          <nav>
+            <button class="addhome">+ 1</button>
+            <button class="subhome">- 1</button>
+          </nav>
+        </div>
+      </aside>
+        <aside>
+      <div class="changehomename">
+        <h3>Update Away Team Name</h3>
+        <nav>
+          <input placeholder="New Away Name" id="away">
+          <button class="nameaway">Update</button>
+        </nav>
+      </div>
+      <div class="changeawayscore">
+        <h3>Update Home Score</h3>
+        <nav>
+          <button class="addaway">+ 1</button>
+          <button class="subaway">- 1</button>
+        </nav>
+      </div>
+    </aside>
+    </section>
     <script src="/main.js" charset="utf-8"></script>
   </body>
 </html>
